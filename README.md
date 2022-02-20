@@ -15,5 +15,5 @@
   * 출력값을 예측 답과 그 확률로 반환
 
 ## Other
-* [DigitPrediction_FrontEnd](https://github.com/seuha516/DigitPredcition_FrontEnd)
+* [DigitPrediction_FrontEnd](https://github.com/seuha516/digit-prediction-react-frontend)
 * [Deeplearning Model (Colab)](https://colab.research.google.com/github/seuha516/DigitPrediction_server/blob/main/DigitPrediction.ipynb)

@@ -16,4 +16,4 @@
 
 ## Other
 * [DigitPrediction_FrontEnd](https://github.com/seuha516/digit-prediction-react-frontend)
-* [Deeplearning Model (Colab)](https://colab.research.google.com/github/seuha516/DigitPrediction_server/blob/main/DigitPrediction.ipynb)
+* [Deeplearning Model (Colab)](https://github.com/seuha516/digit-prediction-flask-backend/blob/master/DigitPrediction.ipynb)

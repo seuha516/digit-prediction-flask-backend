@@ -31,4 +31,4 @@ def predict():
     return str(answer) + ", " + str(round(prob, 2))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port='4005', debug=True, ssl_context=('./fullchain.pem', './privkey.pem'))

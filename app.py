@@ -3,10 +3,10 @@ from flask_cors import CORS
 app = Flask (__name__)
 CORS(app)
 
+from PIL import Image
+from model import test_model
 import numpy as np
 import cv2
-from PIL import Image
-from model import *
 
 # 28*28 흑백 이미지로 변환
 def image_convert(img):
@@ -25,9 +25,11 @@ def check():
 def predict():
     img = image_convert(Image.open(request.files['file'].stream))
     if(np.sum(img)<1.0): return "?, ?"
-    result = pred(img)
+
+    result = test_model(img.reshape(1,28,28,1)[0:1])
     answer = np.argmax(result)
     prob = result[0][answer] * 100.0
+
     return str(answer) + ", " + str(round(prob, 2))
 
 if __name__ == "__main__":

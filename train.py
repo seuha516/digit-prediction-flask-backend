@@ -24,9 +24,9 @@ model.summary()
 
 model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
 checkpoint_cb=keras.callbacks.ModelCheckpoint('best-model.h5')
-history=model.fit(train_scaled,train_target,epochs=100,
+history=model.fit(train_scaled,train_target,epochs=5,
                   validation_data=(val_scaled,val_target),
                   callbacks=[checkpoint_cb])
 
-model.evaluate(val_scaled,val_target)
-model.evaluate(test_scaled,test_target)
+print(model.evaluate(val_scaled,val_target))
+print(model.evaluate(test_scaled,test_target))
